@@ -1,7 +1,8 @@
 # Integration Testing Setup
 
 This is an example of how to setup headless integration tests for a rack app
-with rspec, capybara, and [capybara-webkit](https://github.com/thoughtbot/capybara-webkit).
+with rspec, [capybara](https://github.com/jnicklas/capybara),
+and [capybara-webkit](https://github.com/thoughtbot/capybara-webkit).
 
 ### Setup
 
