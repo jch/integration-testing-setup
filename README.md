@@ -3,12 +3,15 @@
 This is an example of how to setup headless integration tests for a rack app
 with rspec, capybara, and capybara-webkit.
 
-### Rakefile
+### Rake Tasks
 
-Defines a `spec:integration` task that only runs specs in the `spec/integration`
-folder.
+* `spec:integration` only runs specs in the `spec/integration` with capybara dsl
+* `spec` runs all other non-integration specs
 
-### spec/spec_helper.rb
+### Defining Integration Specs
 
-Custom filtering on rspec example groups to include capybara dsl on all specs in
-`spec/integration` without manually adding filters
+To define a new integration spec, add a spec file to the `spec/integration` folder.
+These specs will automatically be tagged with `:type => :request` and `:js => true`,
+and have the Capybara DSL and matchers included.
+
+To see how this is done, check out `spec/spec_helper.rb`
